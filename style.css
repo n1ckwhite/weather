@@ -1,0 +1,54 @@
+.page {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(23, 23, 23);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.weather__card {
+  box-sizing: border-box;
+  padding: 20px;
+  max-width: 250px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgb(106, 18, 189), 0 0 30px rgb(118, 13, 216);
+  border-radius: 10px;
+}
+
+.weahter__form {
+  max-width: 250px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weather__input {
+  width: 75%;
+  background: #000;
+  color: inherit;
+  border: 0;
+  outline: none;
+  font-family: inherit;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.weather__search-button {
+  background: rgb(48, 43, 43);
+  border: 0;
+  border-radius: 0px;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-left: 20px;
+}

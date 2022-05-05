@@ -4,9 +4,10 @@ const cardImg = document.querySelector(".weather__icon");
 const cardGrad = document.querySelector(".weather__grad");
 const cardMaxMin = document.querySelector(".weather__max-min");
 const cardHumidity = document.querySelector(".weather__humidity");
-
+const cardCity = document.querySelector('.weather__city')
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  cardCity.textContent = input.value
   weather(input.value);
 });
 

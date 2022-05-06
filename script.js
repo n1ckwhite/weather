@@ -4,17 +4,18 @@ const cardImg = document.querySelector(".weather__icon");
 const cardGrad = document.querySelector(".weather__grad");
 const cardMaxMin = document.querySelector(".weather__max-min");
 const cardHumidity = document.querySelector(".weather__humidity");
-const cardCity = document.querySelector('.weather__city')
+const cardCity = document.querySelector(".weather__city");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  cardCity.textContent = input.value
+  cardCity.textContent = input.value;
   weather(input.value);
 });
 
 function weather(city) {
   fetch(
-    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=32ffbabacb8762d60cdf100eaa4bd07e`,{mode: 'cors'}
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=32ffbabacb8762d60cdf100eaa4bd07e`,
+    { mode: "cors" }
   )
     .then((parse) => {
       return parse.json();
@@ -28,7 +29,8 @@ function weather(city) {
       const lat = dataFirstChild.lat;
       const lon = dataFirstChild.lon;
       fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=32ffbabacb8762d60cdf100eaa4bd07e`,{mode: 'cors'}
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=32ffbabacb8762d60cdf100eaa4bd07e`,
+        { mode: "cors" }
       )
         .then((data) => {
           return data.json();
@@ -50,4 +52,4 @@ function weather(city) {
 }
 
 weather("Moscow");
-cardCity.textContent = "Москва"
+cardCity.textContent = "Москва";

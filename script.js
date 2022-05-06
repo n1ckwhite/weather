@@ -14,7 +14,7 @@ form.addEventListener("submit", function (e) {
 
 function weather(city) {
   fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=32ffbabacb8762d60cdf100eaa4bd07e`,{mode: 'cors'}
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=32ffbabacb8762d60cdf100eaa4bd07e`,{mode: 'cors'}
   )
     .then((parse) => {
       return parse.json();
